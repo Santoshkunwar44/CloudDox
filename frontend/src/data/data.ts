@@ -116,38 +116,151 @@ export const GroupData=[
 
 export const resourceData=[
     {
-        path:"",
-        name:"",
-        type:"",
-        display:true
-    }
+        placement:1,
+        path:"/videos/1.mp4",
+        name:"0001 - Introduction to Office 365",
+        type:"video",
+    },{
+        name:"0002 - Privacy and Security",
+        path:"/videos/2.mp4",
+        placement:2,
+        type:"video",
+    },
+    {
+        placement:3,
+        path:"/videos/003.mp4",
+        name:"0003 - Microsoft 365 on Your Mobile Device",
+        type:"video",
+    },{
+        name:"0004 - Family Settings",
+        path:"/videos/004.mp4",
+        placement:4,
+        type:"video",
+    },
+    {
+        placement:5,
+        path:"/videos/005.mp4",
+        name:"0005 - Create a Presentation with Microsoft Sway",
+        type:"video",
+    },{
+        name:"0006 - Search the Entire Platform for Microsoft Documents",
+        path:"/videos/006.mp4",
+        placement:6,
+        type:"video",
+    },
+    {
+        placement:7,
+        path:"/videos/007.mp4",
+        name:"0007 - Manage Your Tasks with Microsoft ToDo",
+        type:"video",
+    },{
+        name:"0002 - Privacy and Security",
+        path:"/videos/008.mp4",
+        placement:8,
+        type:"video",
+    },
+    {
+        placement:8,
+        path:"/videos/1.mp4",
+        name:"0001 - Introduction to Office 365",
+        type:"video",
+    },{
+        name:"0002 - Privacy and Security",
+        path:"/videos/9.mp4",
+        placement:9,
+        type:"video",
+    },
+    {
+        placement:10,
+        path:"/videos/10.mp4",
+        name:"0001 - Introduction to Office 365",
+        type:"video",
+    },{
+        name:"0002 - Privacy and Security",
+        path:"/videos/11.mp4",
+        placement:11,
+        type:"video",
+    },
+    {
+        placement:12,
+        path:"/videos/12.mp4",
+        name:"0001 - Introduction to Office 365",
+        type:"video",
+    },{
+        name:"0002 - Privacy and Security",
+        path:"/videos/13.mp4",
+        placement:13,
+        type:"video",
+    },
+    {
+        placement:14,
+        path:"/videos/14.mp4",
+        name:"0001 - Introduction to Office 365",
+        type:"video",
+    },{
+        name:"0002 - Privacy and Security",
+        path:"/videos/15.mp4",
+        placement:15,
+        type:"video",
+    },
+    {
+        placement:16,
+        path:"/videos/16.mp4",
+        name:"0001 - Introduction to Office 365",
+        type:"video",
+    },{
+        name:"0002 - Privacy and Security",
+        path:"/videos/17.mp4",
+        placement:17,
+        type:"video",
+    },
+     {
+        placement:18,
+        path:"/videos/18.mp4",
+        name:"0001 - Introduction to Office 365",
+        type:"video",
+    },{
+        name:"0002 - Privacy and Security",
+        path:"/videos/19.mp4",
+        placement:19,
+        type:"video",
+    },
+    {
+        placement:20,
+        path:"/videos/20.mp4",
+        name:"0001 - Introduction to Office 365",
+        type:"video",
+    },{
+        name:"0002 - Privacy and Security",
+        path:"/videos/21.mp4",
+        placement:21,
+        type:"video",
+    },
 ]
 
 
 
 export const uploadFileData=[
     {
-        name:"Facebook",
-        desc:"Facebook Marketing is a required skill for anyone with a business, product, service, brand, or public figure they need to promote. Connect with new audiences and lower your costs while mass posting quickly and eye-balls on demand."
+        name:"Affiliate Marketing School",
+        desc:"Learn everything you need to know about starting an affiliate business with this HD video course! Imagine supplementing or even replacing your income with an affiliate business that can pay your bills. Don't settle for living paycheck to paycheck."
     },{
-        name:"Youtube",
-        desc:"Learn how to set up and grow a successful YouTube channel from scratch. Understand the works and ranks behind videos so you can be seen by more to maximise revenue."
+        name:"Affiliate Marketing For Beginners",
+        desc:"Affiliate marketing is a lucrative business model that offers low barriers to entry and great earning potential. With this course, you'll learn how to succeed as an affiliate marketer, even if you're a beginner. You'll discover the best strategies for finding profitable products to promote and generating massive amounts of traffic to your offers. With the right approach, you can build a successful affiliate marketing business that provides a steady stream of passive income."
     },{
-        name:"Instagram",
-        desc:"Attract hyper-targeted Instagram followers, convert followers to paying customers, & expand your brand using Instagram viral strategies. "
+        name:"Affiliate Management Templates",
+        desc:""
     },{
  
-        name:"TikTok",
-        desc:"Supercharge your TikTok profile, create viral content for the algorithm, get rapid growth with influencers, get smart with engagement hacking and maximize the social network effect.,"
+
+        name:"Commission Lifestyle",
+        desc:""
     },{
-        name:"LinkedIn",
-        desc:"Discover how to optimize LinkedIn profile to hugely increase your visibility and generate leads. Find and connect with the right target audience and build an massive database of thousands of your ideal clients."
+        name:"Cash-in On Clickbank",
+        desc:"Learn how to make money online with Google and Clickbank from the comfort of your own home. This guide emphasizes the importance of having the right mindset and working hard towards small successes to eventually build a profitable online empire."
     },
     {
-        name:"Content Marketing",
-        desc:"Discover exactly what it takes to plan and execute a content marketing strategy that drives your business forward. You'll have all the tools you need to successfully market your products and services in the digital age."
-    },{
-        name:"Social Media in General",
-        desc:"All of the Social Media strategy fundamentals. Use the art of selling your products through superb marketing efforts by using all of the crucial channels and tools. ß"
-    }
+        name:"Affincome Training Kit",
+        desc:"Learn how to skyrocket your affiliate commissions with the Affincome Training Kit HD video course upgrade package. This course teaches you how to make life-changing affiliate commissions on any promotion, even if you're a complete beginner. Selling other people's products through affiliate marketing is a fast and easy way to get started making money online, and this course will help you get ahead of your competitors."
+    },
 ]

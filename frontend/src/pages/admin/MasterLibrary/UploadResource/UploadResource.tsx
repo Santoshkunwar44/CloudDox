@@ -12,8 +12,6 @@ const UploadResource = () => {
     group:"",
     file:"",
     type:"",
-    size:"",
-    url:"",
     display:true
 })
     const [categoryData,setCategoryData] =useState<BundleType[]>([])
@@ -48,10 +46,12 @@ const UploadResource = () => {
         getFilesByGroup()
     },[uploadLibraryData.group])
 
-    console.log(uploadLibraryData.file)
+    console.log(file)
     const handleFileChange=(e:ChangeEvent<HTMLInputElement>)=>{
         if(e.target.files){
-            setFile(e.target.files[0])
+            let file = e.target.files[0]
+            setFile(file)
+            setUploadLibrayData(prev=>({...prev, name:file?.name.split(".")[0]}))
         }
     }
 
@@ -138,16 +138,9 @@ const UploadResource = () => {
                     size:file?.size
                 })
                 if(status===200){
-                    setUploadLibrayData({
-                        name:"",
-                        bundle:"",
-                        group:"",
-                        type:"",
-                        url:"",
-                        size:"",
-                        file:"",
-                        display:true
-                    })
+                    setUploadLibrayData((prev)=>({...prev,   
+                         name:"",
+                        display:true}))
                     setFile(null)
                     alert("successfully added new library category")
                 }
@@ -173,24 +166,24 @@ const UploadResource = () => {
         <input type="checkbox" name="" id="" checked={uploadLibraryData.display} onChange={(e)=>setUploadLibrayData(prev=>({...prev,display:e.target.checked}))}/>
         <label htmlFor="">Display Book </label>
     </div>
-    <select name="bundle" value={uploadLibraryData.bundle} onChange={handleSelectChange}>
-        <option value=" " selected disabled> Select Category</option>
+    <select name="bundle" value={uploadLibraryData.bundle} onChange={handleSelectChange} >
+        <option value="" selected disabled> Select Category</option>
             {
             categoryData.map(cat=>{
                 return   <option key={cat._id} value={cat._id}>{cat.name}</option>
             })
         }
     </select>
-    <select name="group"onChange={handleSelectChange} >
-        <option value={uploadLibraryData.group} selected disabled> Select Types </option>
+    <select name="group"onChange={handleSelectChange} value={uploadLibraryData.group} >
+        <option value={""} selected disabled> Select group </option>
         {
             groupTypesData.map(type=>{
                 return <option key={type._id} value={type._id}>{type.name}</option>
             })
         }
     </select>
-    <select name="file"onChange={handleSelectChange} >
-        <option value={uploadLibraryData.file} selected disabled> Select File </option>
+    <select name="file"onChange={handleSelectChange} value={uploadLibraryData.file} >
+        <option value={""} selected disabled> Select File </option>
         {
             filesData.map(file=>{
                 return <option key={file._id} value={file._id}>{file.name}</option>

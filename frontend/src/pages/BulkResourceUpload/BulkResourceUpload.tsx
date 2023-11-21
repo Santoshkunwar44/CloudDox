@@ -95,6 +95,13 @@ const BulkResourceUpload = () => {
     })
     }
 
+
+    const uploadResource=async()=>{
+
+        
+
+    }
+
   return (
     <BulkResourceUploadWrapper>
 
