@@ -145,7 +145,7 @@ const UploadResource = () => {
               const {status}=   await createResourceApi({
                     ...uploadLibraryData,
                     url,
-                    size:file?.size
+                    size:file?.size ?? 0
                 })
                 if(status===200){
                     setUploadLibrayData((prev)=>({...prev,   
