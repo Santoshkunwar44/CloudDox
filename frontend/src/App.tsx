@@ -49,6 +49,7 @@ export default App
 const  HomeOutlet=()=>{
   return (
       <HomeOutletWrapper>
+        
         <Sidebar/>
         <Outlet/>
       </HomeOutletWrapper>
