@@ -14,8 +14,8 @@ interface formValues{
 }
 
 interface otherProps{
-    title:string,
-    ref:any 
+    // title:string,
+    // ref:any 
 }
 
 interface myFormProps{
@@ -33,7 +33,7 @@ const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
         handleChange,
         handleSubmit,
         isSubmitting,
-        ref,
+        // ref,
     }= props;
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
@@ -84,23 +84,19 @@ const Login = () => {
 
     const LoginForm= withFormik<myFormProps,formValues>(
     {
-    mapPropsToValues:(props)=>({
-        email:props.initialEmail,
-        password:props.initialPassword,
-    }),
+   mapPropsToValues: (props: myFormProps) => ({
+  email: props.initialEmail || '',
+  password: props.initialPassword || '',
+  confirmPassword: '',
+}),
     validationSchema:Yup.object().shape({
         email:Yup.string().email("Email is not valid").required("Email is required"),
         password:Yup.string().min(6,"Password must be more than 8 characters").required("Password is required")
     }),
-    handleSubmit(
-        loginValue:formValues ,
-        {props,setSubmitting,setErrors}:any 
-        ){
-            
-            handleLogin(loginValue)
-        }
-
-    })(InnerForm)
+   handleSubmit: (registerValue: formValues, {}: any) => {
+  handleLogin(registerValue);
+},
+    })(InnerForm as React.ComponentType<otherProps & FormikProps<formValues>>)
 
 
 

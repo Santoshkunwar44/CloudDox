@@ -18,8 +18,8 @@ interface formValues{
 }
 
 interface otherProps{
-    title:string,
-    ref:any 
+    // title:string,
+    // ref:any 
 }
 
 interface myFormProps{
@@ -38,7 +38,6 @@ const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
         handleChange,
         handleSubmit,
         isSubmitting,
-        ref,
     }= props;
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
@@ -95,28 +94,26 @@ const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
 
     const LoginForm= withFormik<myFormProps,formValues>(
     {
-    mapPropsToValues:(props)=>({
-        email:props.initialEmail,
-        password:props.initialPassword,
-    }),
+mapPropsToValues: (props: myFormProps) => ({
+  email: props.initialEmail || '',
+  password: props.initialPassword || '',
+  username: props.initialUsername || '',
+  confirmPassword: '',
+}),
+
     validationSchema:Yup.object().shape({
         email:Yup.string().email("Email is not valid").required("Email is required"),
         password:Yup.string().min(8,"Password must be more than 8 characters").required("Password is required"),
         username:Yup.string().min(6,"Username must be more thatn 6  characters").required("Username is required"),
         confirmPassword: Yup.string()
-        .oneOf([Yup.ref('password'), null], 'Passwords must match')
-        .required('Confirm Password is required'),
-
+    .oneOf([Yup.ref('password')], 'Passwords must match')
+  .required('Confirm Password is required'),
     }),
-    handleSubmit(
-        registerValue:formValues ,
-        {props,setSubmitting,setErrors}:any 
-        ){
-            
-            handleRegister(registerValue)
-        }
+   handleSubmit: (registerValue: formValues, {}: any) => {
+  handleRegister(registerValue);
+},
 
-    })(InnerForm)
+   })(InnerForm as React.ComponentType<otherProps & FormikProps<formValues>>);
 
     
 

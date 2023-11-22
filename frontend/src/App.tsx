@@ -1,7 +1,6 @@
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home/Home"
 import Group from "./pages/Group/Group"
-import Sidebar from "./shared/Sidebar/Sidebar"
 import { HomeOutletWrapper } from "./App.styles"
 import FilePage from "./pages/FilePage/FilePage"
 import Upload from "./pages/admin/MasterLibrary/Uploads/UploadMasterLibrary"
@@ -11,7 +10,7 @@ import Register from "./pages/Auth/Register/Register"
 import DisplayInfo from "./pages/Auth/DisplayInfo/DisplayInfo"
 import VerifyEmail from "./pages/Auth/VerifyEmail/VerifyEmail"
 import ResetPassword from "./pages/Auth/ResetPassword/ResetPassword"
-import BulkResourceUpload from "./pages/BulkResourceUpload/BulkResourceUpload"
+import Sidebar from "./shared/Sidebar/Sidebar"
 
 
 function App() {
@@ -33,7 +32,6 @@ function App() {
         <Route path="/auth/resetpassword" element={<ResetPassword/>}/>
         <Route path="/auth/verifyEmail" element={<VerifyEmail/>}/>
         <Route path="/info/email_sent" element={<DisplayInfo/>}/>
-        <Route path="/bulkUpload" element={<BulkResourceUpload/>}/>
         <Route path="/info/verifyEmail" element={<DisplayInfo/>}/>
             
 
@@ -49,8 +47,7 @@ export default App
 const  HomeOutlet=()=>{
   return (
       <HomeOutletWrapper>
-        
-        <Sidebar/>
+        <Sidebar isDrawer={false}/>
         <Outlet/>
       </HomeOutletWrapper>
   )

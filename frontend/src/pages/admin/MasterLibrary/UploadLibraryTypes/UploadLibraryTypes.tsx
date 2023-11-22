@@ -1,5 +1,5 @@
 import  { ChangeEvent, SyntheticEvent, useEffect, useRef, useState } from "react"
-import { createGroupApi, createMasterCategoryApi, fetchAllLibraryCategoryApi, uploadImageApi } from "../../../../api/Api"
+import { createGroupApi, fetchAllLibraryCategoryApi, uploadImageApi } from "../../../../api/Api"
 import { BundleType } from "../../../../types/types"
 import { UploadLibraryTypesWrapper } from "./UploadLibraryTypes.styles"
 import { IoMdCloseCircle } from "react-icons/io"

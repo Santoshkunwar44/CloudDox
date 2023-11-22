@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-    import  { Toaster } from 'react-hot-toast';
+import  { Toaster } from 'react-hot-toast';
 import { ChakraProvider } from '@chakra-ui/react';
 
 

@@ -2,7 +2,11 @@ import { SidebarWrapper } from "./Sidebar.styles"
 import {IoLibrarySharp} from "react-icons/io5"
 import {AiOutlineLogout} from "react-icons/ai"
 import { Link, useNavigate } from "react-router-dom"
-const Sidebar = ({isDrawer}) => {
+import React from "react"
+type SidebarPropsType={
+  isDrawer:boolean
+}
+const Sidebar:React.FC<SidebarPropsType> = ({isDrawer}) => {
 
   const navigate =useNavigate()
 
