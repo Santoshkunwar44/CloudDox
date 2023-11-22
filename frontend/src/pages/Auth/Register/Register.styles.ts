@@ -9,7 +9,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 .mainContent{
-    width: 500px;
+    max-width: 500px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 3rem;

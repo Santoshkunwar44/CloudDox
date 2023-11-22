@@ -61,9 +61,9 @@ const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
                         )
                     }
                 </div>
-               <Link to={"/auth/sent_reset_link"}>
+               {/* <Link to={"/auth/sent_reset_link"}>
                 <p className="forgotPassword">Forgot Password ?</p>
-               </Link>
+               </Link> */}
                 <button type="submit" disabled={isSubmitting || !!(errors.email && touched.email) || !!(errors.password && touched.password)}>Log In</button>
             </form>
     
@@ -105,7 +105,7 @@ const Login = () => {
 
 
     const handleLogin=async(loginValue:formValues)=>{
-
+ 
     try {
 
         const {data,status} = await  loginApi(loginValue);

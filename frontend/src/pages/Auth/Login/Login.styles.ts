@@ -7,10 +7,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 .loginContent{
-    width: 500px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    width: 90%;
 
     .loginHeader{
         display: flex;

@@ -242,51 +242,21 @@ export const resourceData=[
 
 export const uploadFileData=[
     {
-        name:"Work From Home Productivity",
-        desc:"This 10-Part Training Series offers practical tips and techniques to help you stay productive and develop a successful mindset while working from home. With the right mindset and focus, you can complete a day's work in just a few hours, leaving you with more free time for other things."
+        name:"The Influential Leader",
+        desc:"This course teaches you how to become an influential leader through deliberate practice and careful study. With these skills, you can inspire and empower your team to take action and command respect. Get instant access to a 10-part training series to help you get ahead even more, right from the comfort of your home."
     },{
-        name:"Solopreneur Productivity",
-        desc:"Solopreneurs often struggle to stay productive as they manage their business independently. Our book provides tips to increase your productivity and help your brand make more conversions, resulting in increased funds."
+        name:"Level Up Your Leadership",
+        desc:"This video training will help you go from novice to effective leader. It provides the basics that apply to your role both inside and outside the office, and is your key to advancing in your career."
 
     },{
-        name:"Simple Productivity",
-        desc:"Learn how to create the right routine and schedule to increase productivity, along with tips on getting better sleep to achieve your goals. Gain access to a 10-part training series to help you achieve more in less time. Download and start playing the video tutorials from the comfort of your own home."
+        name:"Leadership Influence",
+        desc:"Our course is designed to provide you with practical tips and proven strategies that you can start implementing right away, helping you to build a solid foundation for your leadership journey. Whether you're looking to lead a team of executives or inspire your colleagues to reach their full potential, our course is the perfect tool to help you achieve your goals."
     },
     {
-        name:"Productivity Explosion",
-        desc:"This 9-part video course, Productivity Explosion, offers simple techniques to help you get rid of overwhelm and boost your daily productivity. Learn how to plan effectively, track your progress, and develop habits to make you more productive. Plus, discover the best time management and productivity tools."
+        name:"Powerful Entrepreneur",
+       
     },{
-        name:"Beat Procrastination",
-        desc:"Learn to overcome procrastination with my proven strategies and increase your productivity, motivation, and efficiency. In this course, you'll discover how to crush that evil habit once and for all and accomplish more in half the time."
-    },{
-        name:"Crush Excuses",
-        desc:"Learn how to stop procrastinating and increase your productivity with this 10-part training series. Procrastination is a common problem that leads to missed deadlines, poor quality work, and increased stress. This course will teach you how to overcome procrastination, stay focused, and get more done in less time. Say goodbye to excuses and hello to success."
-    },{
-        name:"Focus Mastery",
-        desc:"In this course, you'll learn the secrets to achieving laser-like focus and how to avoid the wasteful activities that hold average people back. With practical tips and techniques, you'll discover how to increase your productivity and achieve your goals in weeks, not months. Stop letting distractions hold you back and start unlocking your full potential with Focus Mastery."
-    },{
-        name:"Mastermind of Productivity",
-        desc:""
-    },{
-        name:"Entrepreneur Intelligence Templates",
-        desc:""
-    },{
-        name:"Productive Powerhouse",
-        desc:"Discover what world-class performers use to get more done in less time. Accomplish your goals without working yourself to death."
-    },
-    {
-        name:"Organize With Office 365",
-        desc:"This over-the-shoulder video series shows you how to work smarter and organize better with Office 365. Improve your productivity and enjoy more free time by using the best office management software available. It's easy to use and flexible."
-    },
-    {
-        name:"Hyper-Productivity At Work or Study",
-        desc:"You'll learn how to optimize your time management skills and develop productive habits that will help you accomplish more in your work or study. With practical tips and tricks, you'll become more efficient and effective in your daily tasks. Get ready to take your productivity to the next level and achieve success like never before."
-    },
-    {
-        name:"Microsoft 365",
-        desc:"Learn how to become indispensable in your niche by mastering the free tools in Microsoft Office with our online course. Our comprehensive training covers the technical process, so you can confidently use these tools to boost your productivity and efficiency."
-    },{
-        name:"Google Productivity Tools",
-        desc:"This comprehensive video course featuring 27 tutorials on how to use Google Tools to their fullest potential! From the Google Calendar to G-Mail and beyond, this course will show you how to leverage the power of these free tools to get more done in less time. Don't settle for just scratching the surface - learn how to unlock the full potential of these productivity tools and discover new features and shortcuts you never knew existed."
+        name:"Invincible Leader",
+        desc:"Learn how to inspire people, and make a difference where extraordinary things happen. Prepare yourself to lead any group from the front."
     }
 ]

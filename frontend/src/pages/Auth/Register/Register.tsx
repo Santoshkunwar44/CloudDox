@@ -127,7 +127,7 @@ const handleRegister=async(registerValue:formValues)=>{
     try {
        const {status} =  await registerApi(registerValue)
        if(status===200){
-        navigate("/info/email_sent")
+        navigate("/info/email_sent?info=email_sent")
        }
         
     } catch (error) {

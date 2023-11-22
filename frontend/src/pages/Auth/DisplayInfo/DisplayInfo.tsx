@@ -4,10 +4,24 @@ import { emailConfirmationApi } from '../../../api/Api';
 import useAlert from '../../../hooks/useAlert';
 
 const DisplayInfo = () => {
+
+   const  info = new URLSearchParams(location.search).get('info');
+
+
+   const mapping={
+    email_sent:<EmailSent/>,
+    account_verfied:<AccountVerfied/>,
+    verify_email:<VerifyEmail/>
+   }
+
+
+
+
+
   return (
     <DisplayInfoWrapper>
 
-        <VerifyEmail/>
+      {mapping[info]}
 
     </DisplayInfoWrapper>
   )

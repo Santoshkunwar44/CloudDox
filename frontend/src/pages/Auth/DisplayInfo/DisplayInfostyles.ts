@@ -6,11 +6,12 @@ height: 100vh;
 background-color: var(--dark_color );
 display: flex;
 justify-content: center;
-padding: 4rem;
+padding: 4rem 1rem;
 align-items: center;
 
 .mainContent{
-    width: 55%;
+   max-width: 550px;
+   width: 95%;
     display: flex;
     flex-direction:  column;
     align-items:  center;

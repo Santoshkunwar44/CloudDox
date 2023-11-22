@@ -10,9 +10,9 @@ const Navigation = () => {
             <button className='homeButton' onClick={()=>navigate("/library")}>Home</button>
             <button className='backButton' onClick={()=>navigate(-1)}>Back</button>
         </div>
-        <div className="rightBox">
+        {/* <div className="rightBox">
             <input type="text" placeholder='search anything...' />
-        </div>
+        </div> */}
     </NavigationWrapper>
   )
 }

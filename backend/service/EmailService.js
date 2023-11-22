@@ -58,7 +58,7 @@ class EmailService{
            <h1 style="color:#0e0b3d" > Hello Resourcify welcomes you  </h1> </br>
            <h3 style="color:#0e0b3d"> You are closer to be the part of Resourcify .  </h3> </br> <h4 style="color:#0e0b3d">
            Click the verify button to verify your email .   </h4> <br/> 
-           <a href="${process.env.FRONTEND_URL}/info/verifyEmail?token=${hash}">
+           <a href="${process.env.FRONTEND_URL}/info/verifyEmail?token=${hash}&info=verify_email">
            <button>Verify Now</button>
            </a> 
             <br>
