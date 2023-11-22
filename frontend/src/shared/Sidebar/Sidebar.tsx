@@ -1,6 +1,5 @@
 import { SidebarWrapper } from "./Sidebar.styles"
 import {IoLibrarySharp} from "react-icons/io5"
-import {MdSwitchAccount} from "react-icons/md"
 import {AiOutlineLogout} from "react-icons/ai"
 import { Link, useNavigate } from "react-router-dom"
 const Sidebar = () => {

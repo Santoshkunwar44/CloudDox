@@ -242,25 +242,51 @@ export const resourceData=[
 
 export const uploadFileData=[
     {
-        name:"Affiliate Marketing School",
-        desc:"Learn everything you need to know about starting an affiliate business with this HD video course! Imagine supplementing or even replacing your income with an affiliate business that can pay your bills. Don't settle for living paycheck to paycheck."
+        name:"Work From Home Productivity",
+        desc:"This 10-Part Training Series offers practical tips and techniques to help you stay productive and develop a successful mindset while working from home. With the right mindset and focus, you can complete a day's work in just a few hours, leaving you with more free time for other things."
     },{
-        name:"Affiliate Marketing For Beginners",
-        desc:"Affiliate marketing is a lucrative business model that offers low barriers to entry and great earning potential. With this course, you'll learn how to succeed as an affiliate marketer, even if you're a beginner. You'll discover the best strategies for finding profitable products to promote and generating massive amounts of traffic to your offers. With the right approach, you can build a successful affiliate marketing business that provides a steady stream of passive income."
-    },{
-        name:"Affiliate Management Templates",
-        desc:""
-    },{
- 
+        name:"Solopreneur Productivity",
+        desc:"Solopreneurs often struggle to stay productive as they manage their business independently. Our book provides tips to increase your productivity and help your brand make more conversions, resulting in increased funds."
 
-        name:"Commission Lifestyle",
-        desc:""
     },{
-        name:"Cash-in On Clickbank",
-        desc:"Learn how to make money online with Google and Clickbank from the comfort of your own home. This guide emphasizes the importance of having the right mindset and working hard towards small successes to eventually build a profitable online empire."
+        name:"Simple Productivity",
+        desc:"Learn how to create the right routine and schedule to increase productivity, along with tips on getting better sleep to achieve your goals. Gain access to a 10-part training series to help you achieve more in less time. Download and start playing the video tutorials from the comfort of your own home."
     },
     {
-        name:"Affincome Training Kit",
-        desc:"Learn how to skyrocket your affiliate commissions with the Affincome Training Kit HD video course upgrade package. This course teaches you how to make life-changing affiliate commissions on any promotion, even if you're a complete beginner. Selling other people's products through affiliate marketing is a fast and easy way to get started making money online, and this course will help you get ahead of your competitors."
+        name:"Productivity Explosion",
+        desc:"This 9-part video course, Productivity Explosion, offers simple techniques to help you get rid of overwhelm and boost your daily productivity. Learn how to plan effectively, track your progress, and develop habits to make you more productive. Plus, discover the best time management and productivity tools."
+    },{
+        name:"Beat Procrastination",
+        desc:"Learn to overcome procrastination with my proven strategies and increase your productivity, motivation, and efficiency. In this course, you'll discover how to crush that evil habit once and for all and accomplish more in half the time."
+    },{
+        name:"Crush Excuses",
+        desc:"Learn how to stop procrastinating and increase your productivity with this 10-part training series. Procrastination is a common problem that leads to missed deadlines, poor quality work, and increased stress. This course will teach you how to overcome procrastination, stay focused, and get more done in less time. Say goodbye to excuses and hello to success."
+    },{
+        name:"Focus Mastery",
+        desc:"In this course, you'll learn the secrets to achieving laser-like focus and how to avoid the wasteful activities that hold average people back. With practical tips and techniques, you'll discover how to increase your productivity and achieve your goals in weeks, not months. Stop letting distractions hold you back and start unlocking your full potential with Focus Mastery."
+    },{
+        name:"Mastermind of Productivity",
+        desc:""
+    },{
+        name:"Entrepreneur Intelligence Templates",
+        desc:""
+    },{
+        name:"Productive Powerhouse",
+        desc:"Discover what world-class performers use to get more done in less time. Accomplish your goals without working yourself to death."
     },
+    {
+        name:"Organize With Office 365",
+        desc:"This over-the-shoulder video series shows you how to work smarter and organize better with Office 365. Improve your productivity and enjoy more free time by using the best office management software available. It's easy to use and flexible."
+    },
+    {
+        name:"Hyper-Productivity At Work or Study",
+        desc:"You'll learn how to optimize your time management skills and develop productive habits that will help you accomplish more in your work or study. With practical tips and tricks, you'll become more efficient and effective in your daily tasks. Get ready to take your productivity to the next level and achieve success like never before."
+    },
+    {
+        name:"Microsoft 365",
+        desc:"Learn how to become indispensable in your niche by mastering the free tools in Microsoft Office with our online course. Our comprehensive training covers the technical process, so you can confidently use these tools to boost your productivity and efficiency."
+    },{
+        name:"Google Productivity Tools",
+        desc:"This comprehensive video course featuring 27 tutorials on how to use Google Tools to their fullest potential! From the Google Calendar to G-Mail and beyond, this course will show you how to leverage the power of these free tools to get more done in less time. Don't settle for just scratching the surface - learn how to unlock the full potential of these productivity tools and discover new features and shortcuts you never knew existed."
+    }
 ]
