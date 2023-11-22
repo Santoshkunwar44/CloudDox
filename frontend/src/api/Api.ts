@@ -3,7 +3,15 @@ import axios from "axios";
 const axiosInstance = axios.create({
     baseURL:"http://localhost:8000/api",
     withCredentials:true
+
 })
+
+
+type createMasterCategoryApiArgType={
+    name:string,
+    
+}
+
 
 // bundle endpoints
 export const createMasterCategoryApi=(payload)=>axiosInstance.post("/bundle/create",payload)

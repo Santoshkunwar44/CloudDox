@@ -104,7 +104,7 @@ const Login = () => {
  
     try {
 
-        const {data,status} = await  loginApi(loginValue);
+        const {status} = await  loginApi(loginValue);
         if(status===200){
             navigate("/")
         }

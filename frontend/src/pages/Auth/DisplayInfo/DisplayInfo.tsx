@@ -21,7 +21,7 @@ const DisplayInfo = () => {
   return (
     <DisplayInfoWrapper>
 
-      {mapping[info]}
+      <DisplayInfoWrapper>{mapping[info as keyof typeof mapping]}</DisplayInfoWrapper>;
 
     </DisplayInfoWrapper>
   )

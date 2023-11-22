@@ -3,6 +3,7 @@ import { UploadFileWrapper } from "../uploadFile/UploadFile.styles"
 import { createResourceApi, fetchAllLibraryCategoryApi, getFilesByGroupApi, getGroupByBundleApi, uploadImageApi, uploadVideoApi } from "../../../../api/Api"
 import { BundleType, GroupType, fileType } from "../../../../types/types"
 import { IoMdCloseCircle } from "react-icons/io"
+import { AxiosResponse } from "axios"
 
 
 const UploadResource = () => {
@@ -26,11 +27,18 @@ const UploadResource = () => {
         pdf:"application/pdf",
         image:".jpg, .jpeg, .png"
     }   
-    const apiRoutesMapping={
-        image:uploadImageApi,
-        video:uploadVideoApi,
-        pdf:uploadImageApi,
-    }
+   type ApiRoutesMapping = {
+  image: (url: string | ArrayBuffer) => Promise<AxiosResponse<any, any>>;
+  video: (url: string | ArrayBuffer) => Promise<AxiosResponse<any, any>>;
+  pdf: (url: string | ArrayBuffer) => Promise<AxiosResponse<any, any>>;
+};
+
+ const apiRoutesMapping: ApiRoutesMapping = {
+  image: uploadImageApi,
+  video: uploadVideoApi,
+  pdf: uploadImageApi,
+};
+
     useEffect(()=>{
     getAllCategoryDatas()
     },[])
@@ -120,7 +128,9 @@ const UploadResource = () => {
      const handleUploadImage=async(url:string|ArrayBuffer)=>{
 
         try {
-         const {data,status} =    await apiRoutesMapping[uploadLibraryData.type](url)
+       const { data, status } = await (apiRoutesMapping as Record<string, (url: string | ArrayBuffer) => Promise<AxiosResponse<any, any>>>)[uploadLibraryData.type](url);
+
+
          if(status===200){
             handleSubmit(data.message)
          }
@@ -190,7 +200,12 @@ const UploadResource = () => {
             })
         }
     </select>
-    <input type="file" ref={fileInputRef} onChange={handleFileChange} accept={supportedMedia[uploadLibraryData.type]} style={{display:"none"}}/>
+    <input
+     type="file"
+      ref={fileInputRef}
+     onChange={handleFileChange} 
+     accept={(supportedMedia as Record<string, string>)[uploadLibraryData.type]} 
+     style={{display:"none"}}/>
      {
         file && <div className="imageWrapper">
             <IoMdCloseCircle onClick={()=>setFile(null)}/>
