@@ -24,4 +24,15 @@ img{
     }
 }
 
+@media screen  and (max-width:768px){
+
+    height: 300px;
+    width: 100%;
+    img{
+        height: 240px;
+    }
+    
+}
+
+
 `

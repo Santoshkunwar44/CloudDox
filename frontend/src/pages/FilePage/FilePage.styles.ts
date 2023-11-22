@@ -42,4 +42,12 @@ gap: 3rem;
 }
 
 
+@media screen  and (max-width:768px){
+
+    .innerBox{
+        width: 90%;
+    }
+    
+}
+
 `

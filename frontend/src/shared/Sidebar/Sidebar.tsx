@@ -2,7 +2,7 @@ import { SidebarWrapper } from "./Sidebar.styles"
 import {IoLibrarySharp} from "react-icons/io5"
 import {AiOutlineLogout} from "react-icons/ai"
 import { Link, useNavigate } from "react-router-dom"
-const Sidebar = () => {
+const Sidebar = ({isDrawer}) => {
 
   const navigate =useNavigate()
 
@@ -12,10 +12,10 @@ const Sidebar = () => {
   }
 
   return (
-    <SidebarWrapper>
+    <SidebarWrapper isDrawer={isDrawer}>
       <Link to="/" className="logoBox">
           <img src="/images/logo.png" alt="logo" />
-          <h1 className="appName">CloudDocx</h1>
+          <h1 className="appName">Resourcify</h1>
       </Link>
       <div className="sidebarItemList">
 

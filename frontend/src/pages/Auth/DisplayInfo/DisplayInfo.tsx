@@ -60,13 +60,13 @@ const VerifyEmail=()=>{
   const {notify} =useAlert()
 
    const handleConfirm=async()=>{
-
+    
 
     if(!token)return;
 
     try {
 
-        const {data,status } = await emailConfirmationApi(token); 
+        const {status } = await emailConfirmationApi(token); 
          
         if(status===200){
         

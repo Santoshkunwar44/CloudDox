@@ -14,9 +14,10 @@ gap: 5rem;
     }
 }
 .categoryContainer{
-    display: grid;
-    grid-template-columns:  450px 450px;
+    display: flex ;
+    flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 
 }
 `

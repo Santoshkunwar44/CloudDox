@@ -27,6 +27,7 @@ export const GroupWrapper = styled.div`
         color: var(--gray_color);
         letter-spacing: 1px;
         font-size: 13px;
+        text-align: center;
     }
     .groupItemContainer{
         display: flex;

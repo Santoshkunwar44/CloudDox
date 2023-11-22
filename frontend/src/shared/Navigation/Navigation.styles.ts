@@ -4,14 +4,32 @@ export const NavigationWrapper = styled.div`
 
 width: 100%;
 display: flex;
-justify-content: space-between;
 
+
+.appLogo{
+    align-items:  center;
+    gap: 0.5rem;
+    display: none;
+    img{
+        width: 40px;
+        height: 40px;
+    }
+    .appName{
+        color: var(--main_color);
+        font-size: 1.5rem;
+        font-weight: bold;
+
+    }
+
+    
+}
 .leftBox{
     display: flex;
     gap: 0.5rem;
     button{
         height: 40px !important;
         cursor: pointer;
+        padding: 0 1rem;
     }
     .homeButton{
         background-color: var(--main_color);
@@ -38,6 +56,14 @@ justify-content: space-between;
             letter-spacing: 0.8px;
             font-size: 12px;
         }
+    }
+}
+@media screen and (max-width:768px) {
+
+    width: 100%;
+    justify-content: space-between;
+    .appLogo{
+        display: flex;
     }
 }
 `

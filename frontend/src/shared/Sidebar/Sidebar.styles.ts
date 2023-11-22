@@ -1,6 +1,9 @@
-import {styled} from "styled-components"
+import {styled ,css} from "styled-components"
 
-export const SidebarWrapper = styled.div`
+type SidebarWrapperPropsType={
+    isDrawer:boolean
+}
+export const SidebarWrapper = styled.div<SidebarWrapperPropsType>`
 
 flex:2.5;
 background-color: var(--dark_color);
@@ -73,4 +76,11 @@ border-right: 1px solid rgb(55, 65, 81);
     }
 }
 
+
+
+      @media (max-width: 768px) {
+
+        display: ${props=>props.isDrawer ? "flex":"none"};
+      }
+    
 `
