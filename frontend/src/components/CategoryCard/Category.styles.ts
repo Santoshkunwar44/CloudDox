@@ -19,7 +19,6 @@ img{
     height: 40px;
     p{
         color: var(--main_color);
-        font-weight: 600;
         font-size: 14px;
         letter-spacing: 0.9px;
     }
