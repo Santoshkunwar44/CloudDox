@@ -20,7 +20,7 @@ const VerifyEmail = () => {
   try {
     const {status} = await sentEmailToVerifyAccountApi(email);
     if(status===200){
-      navigate("/info/verifyEmail")
+      navigate("/info/verifyEmail?info=email_sent")
        notify("Verification link has been sent to your email","success")
     }
 }  catch (error:any) {

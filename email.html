@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html>
+        <head>
+
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+            </style>
+      </head>
+        <div style="background-color: black;padding: 1rem;">
+                    <div style="display: flex; align-items: center;gap: 10px;">
+                        <img src="https://res.cloudinary.com/onlinecoder/image/upload/v1700739170/bbqf6shepflr0ea2ktih.png" width="35px"
+                            height="35px" style="border-radius:4px" />
+                        <h1 style="color: orange;  ">Resourcify</h1>
+                    </div>
+                    <h1 style="color:white"> Hello Resourcify welcomes you </h1> </br>
+                    <h3 style="color:white"> You are closer to be the part of Resourcify . </h3> </br>
+                    <h4 style="color:white">
+                        Click the verify button to verify your email . </h4> <br />
+                    <a href="${process.env.FRONTEND_URL}/info/verifyEmail?token=${hash}&info=verify_email">
+                        <button
+                            style="background-color: orange; height: 45px; padding: 0 1rem;font-size: 15px;letter-spacing: 1px;border: none;">Verify
+                            Now</button>
+                    </a>
+          </div>
+
+    </html>
+  
+</body>
+</html>

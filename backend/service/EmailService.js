@@ -40,30 +40,53 @@ class EmailService{
     getResetPasswordHtml(email){
 
         const confirmationHash= authService.getEmailConfirmationHash(email);
-        return `<div>
-        <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/352850187_808709043911745_566344590095350869_n.jpg?stp=dst-jpg_p403x403&_nc_cat=108&cb=99be929b-3346023f&ccb=1-7&_nc_sid=aee45a&_nc_ohc=Rqrey-x9sZ8AX9n27lg&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTRKzT-KFPaeoRLfSDMnnD-2bSQylVJ8XczY2N3QVFdkQ&oe=64A91F73" width="200px" style="border-radius:4px"/> <br/>
-         <h1 style="color:#0e0b3d" > Reset your password  </h1> </br>
-          </br> <h4 style="color:#0e0b3d">Click the button below to reset  your password. </h4> <br/> <a style="background:#686de0;height:40px; text-decoration:none;  padding:8px ; cursor:pointer;letter-spacing:1px; border-radius:4px;text-align:center;color:white;" href="${process.env.FRONTEND_URL}/auth/resetpassword?resetToken=${confirmationHash}"> RESET PASSWORD </a> </br> <br> <br>  </div>`
+        return ``
+        
+      
 
     }
 
     getAccConfirmationHtml(email){
 
         const hash = authService.getEmailConfirmationHash(email)
-        
-
-        
-        return `<div>
-          <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/352850187_808709043911745_566344590095350869_n.jpg?stp=dst-jpg_p403x403&_nc_cat=108&cb=99be929b-3346023f&ccb=1-7&_nc_sid=aee45a&_nc_ohc=Rqrey-x9sZ8AX9n27lg&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdTRKzT-KFPaeoRLfSDMnnD-2bSQylVJ8XczY2N3QVFdkQ&oe=64A91F73" width="200px" style="border-radius:4px"/> <br/>
-           <h1 style="color:#0e0b3d" > Hello Resourcify welcomes you  </h1> </br>
-           <h3 style="color:#0e0b3d"> You are closer to be the part of Resourcify .  </h3> </br> <h4 style="color:#0e0b3d">
-           Click the verify button to verify your email .   </h4> <br/> 
-           <a href="${process.env.FRONTEND_URL}/info/verifyEmail?token=${hash}&info=verify_email">
-           <button>Verify Now</button>
-           </a> 
-            <br>
-             <br> 
-              </div>`
+        return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: black; color: white;">
+    <table cellspacing="0" cellpadding="0" width="100%" style="background: black;">
+        <tr>
+            <td style="padding: 1rem;">
+                <table cellspacing="0" cellpadding="0" style="display: flex; flex-direction: column;">
+                    <tr>
+                        <td style="display: flex; align-items: center; gap: 10px;">
+                            <h1 style="color:orange">Resourcify</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p  style="letter-spacing:1px;">Hello Resourcify welcomes you</p>
+                            <p  style="letter-spacing:1px;" >You are closer to being part of Resourcify.</p>
+                            <p  style="letter-spacing:1px;">Click the verify button to verify your email.</p>
+                            <a href="${process.env.FRONTEND_URL}/info/verifyEmail?token=${hash}&info=verify_email"
+                                style="text-decoration: none; color: white;">
+                                <button style="background-color: orange; height: 45px; padding: 0 1rem; font-size: 15px; letter-spacing: 1px; border: none; color: white;">
+                                    Verify Now
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+`
 
     }
 
