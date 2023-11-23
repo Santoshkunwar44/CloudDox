@@ -53,3 +53,14 @@ export type GroupTypeState={
     bundle:BundleType|null,
     files:fileType[]
 }
+
+export type userType={
+    _id:string,
+    username:string,
+    email:string,
+    password:string,
+    isAdmin:boolean,
+    isVerified:boolean,
+    createdAt:string,
+    modifiedAt:string,
+}
