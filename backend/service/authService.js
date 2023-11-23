@@ -21,7 +21,7 @@ class AuthService{
     }
         getEmailConfirmationHash(email){
 
-        const token =  jwt.sign({ email }, process.env.EMAIL_CONFIRMATOIN_HASH, { expiresIn: 60 * 10 })
+        const token =  jwt.sign({ email }, process.env.EMAIL_CONFIRMATOIN_HASH, { expiresIn: 60 * 5 })
         return token;
 
     }

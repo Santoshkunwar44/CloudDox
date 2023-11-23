@@ -15,6 +15,7 @@ const Navigation = () => {
         <h3 className='appName'>Resourcify</h3>
       </div>
       </Link>
+    
         <div className="leftBox">
             <button className='homeButton' onClick={()=>navigate("/library")}>Home</button>
             <button className='backButton' onClick={()=>navigate(-1)}>Back</button>

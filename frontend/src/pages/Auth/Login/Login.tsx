@@ -14,20 +14,23 @@ import { actionCreators } from "../../../redux"
 interface formValues{
     email:string,
     password:string,
+    
 }
 
 interface otherProps{
     // title:string,
     // ref:any 
+    loading:boolean,
+    
 }
 
 interface myFormProps{
     initialEmail?:string,
     initialPassword?:string,
     login?:any
+    loading: boolean; // Add this line
 }
 const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
-
     const {
         values,
         errors,
@@ -36,12 +39,14 @@ const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
         handleChange,
         handleSubmit,
         isSubmitting,
+        loading,
         // ref,
     }= props;
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Prevent the default form submission behavior
+      e.preventDefault(); // Prevent the default form submission behavior
     handleSubmit(e); // Manually call the formik handleSubmit function
+
   };
 
     return <>
@@ -65,9 +70,12 @@ const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
                     }
                 </div>
                {/* <Link to={"/auth/sent_reset_link"}>
-                <p className="forgotPassword">Forgot Password ?</p>
+                <p className="forgotPassword">Forgot
+                 Password ?</p>
+
                </Link> */}
-                <button type="submit" disabled={isSubmitting || !!(errors.email && touched.email) || !!(errors.password && touched.password)}>Log In</button>
+              
+                <button className={loading ? "loading":""} type="submit" disabled={isSubmitting || !!(errors.email && touched.email) || !!(errors.password && touched.password)}>{loading ?  <iframe src="https://lottie.host/embed/001b9309-3a98-48c6-96d4-42b13cf1b412/eDDX84yAca.json"></iframe>:"Login"}</button>
             </form>
     
     </>
@@ -85,13 +93,15 @@ const Login = () => {
     const [isVerified,setIsVerified] = useState<boolean|null>(null)
     const dispatch =useDispatch()
     const {AddUserAction} = bindActionCreators(actionCreators,dispatch)
+    const [loading,setLoading] = useState(false)
+    const LoginForm = withFormik<myFormProps, formValues>({
 
-    const LoginForm= withFormik<myFormProps,formValues>(
-    {
+    
    mapPropsToValues: (props: myFormProps) => ({
   email: props.initialEmail || '',
   password: props.initialPassword || '',
   confirmPassword: '',
+  
 }),
     validationSchema:Yup.object().shape({
         email:Yup.string().email("Email is not valid").required("Email is required"),
@@ -100,12 +110,12 @@ const Login = () => {
    handleSubmit: (registerValue: formValues, {}: any) => {
   handleLogin(registerValue);
 },
-    })(InnerForm as React.ComponentType<otherProps & FormikProps<formValues>>)
+  })(InnerForm as React.ComponentType<otherProps & FormikProps<formValues>>);
 
 
 
     const handleLogin=async(loginValue:formValues)=>{
- 
+        setLoading(true)
     try {
 
         const {status,data} = await  loginApi(loginValue);
@@ -113,9 +123,10 @@ const Login = () => {
             AddUserAction(data.message)
             navigate("/")
         }
-
+        setLoading(false)
         
     } catch (error:any) {
+        setLoading(false)
         if(error.response?.data?.isVerified===false){
             notify("This email is not verified","error")
             setIsVerified(false)
@@ -134,7 +145,7 @@ const Login = () => {
                 <img src="/images/logo.png" alt="logo" />
                 <h3 className="headerText">Sign in to your account</h3>
             </div>
-            <LoginForm/>
+            <LoginForm  loading={loading}/>
             {
                 isVerified ===false && <>
                    <Link to={"/auth/verifyEmail"}>

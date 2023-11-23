@@ -22,6 +22,7 @@ align-items: center;
 
 button{
     background-color: var(--main_color);
+    padding: 0 1rem;
 }
 
 .infoText{

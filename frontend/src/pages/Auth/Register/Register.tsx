@@ -3,10 +3,12 @@ import { RegisterWrapper } from './Register.styles'
 import { FormikProps, withFormik } from 'formik'
 import * as Yup from "yup"
 import { registerApi } from '../../../api/Api'
+import { useState } from 'react'
 
 const Register = () => {
 
     const navigate=useNavigate()
+    const [loading,setLoading] =useState(false)
 
 
 
@@ -17,16 +19,19 @@ interface formValues{
     confirmPassword:string, 
 }
 
+
 interface otherProps{
     // title:string,
     // ref:any 
+    loading:boolean
 }
 
 interface myFormProps{
     initialEmail?:string,
     initialPassword?:string,
     initialUsername?:string,
-    login?:any
+    login?:any,
+    loading:boolean
 }
 const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
 
@@ -83,7 +88,7 @@ const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
                         )
                     }
                 </div>
-                <button disabled={isSubmitting || !!(errors.email && touched.email) || !!(errors.password && touched.password) || !!(errors.username && touched.username) || !!(errors.confirmPassword && touched.confirmPassword)}  className='submit'>Register</button>
+                <button className={loading ? "loading":""} disabled={isSubmitting || !!(errors.email && touched.email) || !!(errors.password && touched.password) || !!(errors.username && touched.username) || !!(errors.confirmPassword && touched.confirmPassword)}  >{loading ? <iframe src="https://lottie.host/embed/001b9309-3a98-48c6-96d4-42b13cf1b412/eDDX84yAca.json"></iframe> :"Register"}</button>
             </form>
     </>
 
@@ -119,15 +124,17 @@ mapPropsToValues: (props: myFormProps) => ({
 
 const handleRegister=async(registerValue:formValues)=>{
 
-
+    setLoading(true)
 
     try {
        const {status} =  await registerApi(registerValue)
+
        if(status===200){
         navigate("/info/email_sent?info=email_sent")
        }
-        
+        setLoading(false)
     } catch (error) {
+        setLoading(false)
             console.log(error)
     }
     
@@ -142,7 +149,7 @@ const handleRegister=async(registerValue:formValues)=>{
                 <img src="/images/logo.png" alt="logo" />
                 <h1 className='headerText'>Create  a new account </h1>
             </div>
-        <LoginForm/>
+        <LoginForm loading={loading}/>
           <Link to={"/auth/login"}>
            <p className='goTo'>Already have account ?</p>
           </Link> 

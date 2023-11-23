@@ -67,7 +67,18 @@ justify-content: center;
             background-color: var(--main_color);
             height: 50px;
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: 18px;
+        }
+        .loading{
+            background-color: transparent;
+            border: 1px solid var(--main_color);
+        }
+        iframe{
+            width: 40px;
+            height: 40px;
         }
     }
     .goTo{
