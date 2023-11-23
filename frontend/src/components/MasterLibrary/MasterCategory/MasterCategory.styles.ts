@@ -11,6 +11,7 @@ gap: 5rem;
     .headerTitle{
         color: var(--main_color);
         font-size: 2.5rem;
+        font-weight: bold;
     }
 }
 .categoryContainer{

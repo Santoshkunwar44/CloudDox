@@ -20,6 +20,8 @@ export const GroupWrapper = styled.div`
         gap: 10px;
         align-items:  center;
         .headerTitle{
+            font-weight: bold;
+            font-size: 2.5rem;
             color: var(--main_color);
         }
     }

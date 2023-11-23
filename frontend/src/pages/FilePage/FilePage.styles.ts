@@ -19,6 +19,8 @@ overflow: scroll;
     align-items: center;
     padding: 20px 0;
     .headerTitle{
+        font-weight: bold;
+        font-size: 2.5rem;
         color: var(--main_color);
     }
 }
