@@ -4,7 +4,14 @@ export const NavigationWrapper = styled.div`
 
 width: 100%;
 display: flex;
+align-items: center;
 
+.menuIcon{
+    font-size: 1.5rem;
+    fill:  var(--main_color);
+    cursor: pointer;
+    display: none;
+}
 
 .appLogo{
     align-items:  center;
@@ -64,6 +71,12 @@ display: flex;
     justify-content: space-between;
     .appLogo{
         display: flex;
+    }
+    .leftBox{
+        display: none;
+    }
+    .menuIcon{
+        display: block;
     }
 }
 `

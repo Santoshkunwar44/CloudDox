@@ -23,4 +23,11 @@ width: 450px;
     color: var(--gray_color);
 }
 
+@media screen  and (max-width:768px){
+    width: 100%;
+    .groupDesc{
+        text-align: justify;
+    }
+}
+
 `

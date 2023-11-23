@@ -68,6 +68,7 @@ justify-content: center;
             height: 50px;
             cursor: pointer;
             font-size: 18px;
+            padding: 0 1rem;
         }
     }
     .goTo{

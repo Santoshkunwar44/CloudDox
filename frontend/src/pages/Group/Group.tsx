@@ -5,7 +5,7 @@ import Navigation from "../../shared/Navigation/Navigation"
 import { GroupWrapper } from "./Group.styles"
 import { useEffect, useState } from "react"
 import { fetchBundlebyIdApi } from "../../api/Api"
-import { BundleType } from "../../types/types"
+import { BundleType } from "../../utils/types/types"
 
 const Group = () => {
   const {id} = useParams()

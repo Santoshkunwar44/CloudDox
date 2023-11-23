@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { CategoryCardWrapper } from "./Category.styles"
-import { BundleType } from "../../types/types"
+import { BundleType } from "../../utils/types/types";
+
 
 type CategoryCardProps = {
   data:BundleType
