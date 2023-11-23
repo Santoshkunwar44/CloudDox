@@ -5,6 +5,10 @@ import * as Yup from "yup"
 import { loginApi } from "../../../api/Api"
 import useAlert from "../../../hooks/useAlert"
 import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { AddUserAction } from "../../../redux/actions/actionCreators"
+import { bindActionCreators } from "redux"
+import { actionCreators } from "../../../redux"
 
 
 
@@ -80,7 +84,8 @@ const Login = () => {
     const navigate =useNavigate()
     const {notify}=useAlert()
     const [isVerified,setIsVerified] = useState<boolean|null>(null)
-
+    const dispatch =useDispatch()
+    const {AddUserAction} = bindActionCreators(actionCreators,dispatch)
 
     const LoginForm= withFormik<myFormProps,formValues>(
     {
@@ -91,7 +96,7 @@ const Login = () => {
 }),
     validationSchema:Yup.object().shape({
         email:Yup.string().email("Email is not valid").required("Email is required"),
-        password:Yup.string().min(6,"Password must be more than 8 characters").required("Password is required")
+        password:Yup.string().min(8,"Password must be more than 8 characters").required("Password is required")
     }),
    handleSubmit: (registerValue: formValues, {}: any) => {
   handleLogin(registerValue);
@@ -104,8 +109,9 @@ const Login = () => {
  
     try {
 
-        const {status} = await  loginApi(loginValue);
+        const {status,data} = await  loginApi(loginValue);
         if(status===200){
+            AddUserAction(data.message)
             navigate("/")
         }
 
@@ -120,7 +126,6 @@ const Login = () => {
         console.log(error)
     }
 }
-
 
     
   return (

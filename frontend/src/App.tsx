@@ -11,6 +11,7 @@ import DisplayInfo from "./pages/Auth/DisplayInfo/DisplayInfo"
 import VerifyEmail from "./pages/Auth/VerifyEmail/VerifyEmail"
 import ResetPassword from "./pages/Auth/ResetPassword/ResetPassword"
 import Sidebar from "./shared/Sidebar/Sidebar"
+import ProtectedRoutes from "./pages/ProtectedRoutes/ProtectedRoutes"
 
 
 function App() {
@@ -18,12 +19,15 @@ function App() {
     <>
     <BrowserRouter>
         <Routes>
+          <Route element={<ProtectedRoutes/>}>
+
           <Route path="" element={<Navigate to={"/library"}/>}/>
           <Route path="/library" element={<HomeOutlet/>}>
             <Route path="" element={<Home/>}/>
             <Route path="bundle/:id" element={<Group/>}>
             </Route>
             <Route path="file/:id" element={<FilePage/>}/>
+          </Route>
           </Route>
           <Route path="/admin" element={<Upload/>}/>
         <Route path="/auth/login" element={<Login/>}/>

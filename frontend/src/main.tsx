@@ -4,11 +4,15 @@ import App from './App.tsx'
 import './index.css'
 import  { Toaster } from 'react-hot-toast';
 import { ChakraProvider } from '@chakra-ui/react';
+import { Provider } from 'react-redux';
+import { store } from './redux/store.ts';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ChakraProvider>
+      <Provider store={store}>
+
 
     <Toaster 
     toastOptions={{
@@ -17,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       }
     }}/>
     <App />
+    </Provider>
     </ChakraProvider>
   </React.StrictMode>,
 )

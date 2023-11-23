@@ -104,7 +104,7 @@ mapPropsToValues: (props: myFormProps) => ({
     validationSchema:Yup.object().shape({
         email:Yup.string().email("Email is not valid").required("Email is required"),
         password:Yup.string().min(8,"Password must be more than 8 characters").required("Password is required"),
-        username:Yup.string().min(6,"Username must be more thatn 6  characters").required("Username is required"),
+        username:Yup.string().min(3,"Username must be more thatn 3  characters").required("Username is required"),
         confirmPassword: Yup.string()
     .oneOf([Yup.ref('password')], 'Passwords must match')
   .required('Confirm Password is required'),
