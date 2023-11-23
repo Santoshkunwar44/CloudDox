@@ -1,14 +1,14 @@
 import {styled} from "styled-components"
 
 export const CategoryCardWrapper = styled.div`
-height: 250px;
+height: 280px;
 width: 450px;
 
 padding: 5px;
 border-radius: 4px;
 cursor: pointer;
 img{
-    height: 190px;
+    height: 235px;
     object-fit: cover;
     width: 100%;
     border-radius: 5px ;
@@ -16,7 +16,7 @@ img{
 .nameBox{
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 45px;
     p{
         color: var(--main_color);
         font-size: 14px;
