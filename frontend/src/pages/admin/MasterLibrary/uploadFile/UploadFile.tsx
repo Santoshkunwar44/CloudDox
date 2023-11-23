@@ -1,7 +1,7 @@
 import { UploadFileWrapper } from './UploadFile.styles'
 import { ChangeEvent, SyntheticEvent, useEffect, useState } from 'react'
 import { createFileApi, fetchAllLibraryCategoryApi, getGroupByBundleApi } from '../../../../api/Api'
-import { BundleType, GroupType } from '../../../../types/types'
+import { BundleType, GroupType } from '../../../../utils/types/types'
 
 const UploadFile = () => {
     const [uploadLibraryData,setUploadLibrayData] =useState({

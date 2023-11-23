@@ -6,7 +6,6 @@ import { loginApi } from "../../../api/Api"
 import useAlert from "../../../hooks/useAlert"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { AddUserAction } from "../../../redux/actions/actionCreators"
 import { bindActionCreators } from "redux"
 import { actionCreators } from "../../../redux"
 

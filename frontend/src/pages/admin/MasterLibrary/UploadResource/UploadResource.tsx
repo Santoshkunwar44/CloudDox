@@ -1,7 +1,7 @@
 import { ChangeEvent, SyntheticEvent, useEffect, useRef, useState } from "react"
 import { UploadFileWrapper } from "../uploadFile/UploadFile.styles"
 import { createResourceApi, fetchAllLibraryCategoryApi, getFilesByGroupApi, getGroupByBundleApi, uploadImageApi, uploadVideoApi } from "../../../../api/Api"
-import { BundleType, GroupType, fileType } from "../../../../types/types"
+import { BundleType, GroupType, fileType } from "../../../../utils/types/types"
 import { IoMdCloseCircle } from "react-icons/io"
 import { AxiosResponse } from "axios"
 

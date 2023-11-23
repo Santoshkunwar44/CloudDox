@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { FileTypeWrapper, FileWrapper } from './File.styles'
 import { useEffect, useState } from 'react'
 import { fetchFileByIdApi } from '../../api/Api'
-import { FileTypeProps } from '../../types/types'
+import { FileTypeProps } from '../../utils/types/types'
 type FileProps = {
   data:string
 }

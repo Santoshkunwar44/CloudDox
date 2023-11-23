@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import CategoryCard from '../../CategoryCard/CategoryCard'
 import { MasterCategoryWrapper } from './MasterCategory.styles'
 import { fetchAllLibraryCategoryApi } from '../../../api/Api'
-import { BundleType } from '../../../types/types'
+import { BundleType } from '../../../utils/types/types'
 
 const MasterCategory = () => {
 

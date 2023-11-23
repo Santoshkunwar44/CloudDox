@@ -1,5 +1,5 @@
 import React from 'react'
-import { GroupType } from '../../types/types'
+import { GroupType } from '../../utils/types/types'
 import File from '../File/File'
 import { GroupItemWrapper } from './GroupItem.styles'
 

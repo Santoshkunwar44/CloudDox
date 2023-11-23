@@ -1,4 +1,4 @@
-import { ResourceType } from '../../types/types'
+import { ResourceType } from '../../utils/types/types'
 import { VideoFileWrapper } from './VideoFile.styles'
 
 type VideoFilePropsType = {

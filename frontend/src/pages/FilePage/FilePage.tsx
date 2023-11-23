@@ -6,7 +6,7 @@ import BookFile from '../../components/BookFile/BookFile'
 import PdfFile from '../../components/pdfFile/PdfFile'
 import { useParams } from 'react-router-dom'
 import { fetchFileByIdApi } from '../../api/Api'
-import { FileTypeProps, ResourceType } from '../../types/types'
+import { FileTypeProps, ResourceType } from '../../utils/types/types'
 
 const FilePage = () => {
   const {id} = useParams();

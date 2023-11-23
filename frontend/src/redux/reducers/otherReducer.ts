@@ -1,6 +1,6 @@
 
 import { Action } from "../actions";
-import { ActionTypes } from "../actions/ActionTypes";
+import { ActionTypes } from "../actions/actionTypes";
 
 
 const INITIAL_USERSTATE = {

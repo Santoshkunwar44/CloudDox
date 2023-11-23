@@ -1,5 +1,5 @@
 import React from 'react'
-import { ResourceType } from '../../types/types'
+import { ResourceType } from '../../utils/types/types'
 import { PdfFileWrapper } from './PdfFile.styles'
 import {ImLink} from 'react-icons/im'
 type PdfFilePropsType={
