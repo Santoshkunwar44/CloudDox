@@ -1,5 +1,6 @@
 const User = require("../model/User");
 const EmailService = require("../service/EmailService");
+const authService = require("../service/authService");
 const { hashPassword, comparePassword } = require("../service/authService");
 
 class AuthController{
@@ -44,7 +45,6 @@ class AuthController{
 
     try {
     const {email,exp,invalidLink} =  await  EmailService.verifyEmailConfirmationToken(token);
-    console.log("the res",email,exp,invalidLink);
 
     
     if(email){
@@ -115,13 +115,40 @@ class AuthController{
 
     } catch (error) {
       
-      let errorMessage = "Something went wrong";
-      if(error.type==="custom"){
-        errorMessage = error.message; 
-      }
+     
 
-      return res.status(500).json({message:errorMessage,success:true})
+      return res.status(500).json({message:error.message,success:true})
     }
   }
+
+
+
+  async resetPassword(req,res,next){
+
+    const {password,token} = req.body;
+
+    try {
+
+       const {email} =  await  EmailService.verifyEmailConfirmationToken(token);
+
+       if(email){
+
+        const hashedPassword = await  authService.hashPassword(password);
+
+        await User.findOneAndUpdate({email},{
+          $set:{
+            password:hashedPassword
+          }
+        })
+       }
+      res.status(200).json({message:"password reset successfully",success:true})
+       
+    } catch (error) {
+        next(error)
+    }
+  }
+
+
+
 }
 module.exports = new AuthController();

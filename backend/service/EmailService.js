@@ -52,7 +52,7 @@ class EmailService{
 </head>
 <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: black; color: white;">
     <table cellspacing="0" cellpadding="0" width="100%" style="background: black;">
-        <tr>
+        <tr >
             <td style="padding: 1rem;">
                 <table cellspacing="0" cellpadding="0" style="display: flex; flex-direction: column;">
                     <tr>
@@ -61,13 +61,15 @@ class EmailService{
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <p  style="letter-spacing:1px;">Reset Resourcify password .</p>
-                            <p  style="letter-spacing:1px;" >You should reset the password before this link expires.The validation time of this reset password link is for 5 minutes after this email was received .  You can reset password till ${moment(linkExpiratinTime).format('MMMM Do YYYY, h:mm:ss a')}</p>
-                            <p  style="letter-spacing:1px;">Click the reset  button to reset  your password.</p>
+                        <td >
+                            <p style="letter-spacing:1px; color:white;">Reset Resourcify password .</p>
+                            <p style="letter-spacing:1px; color:white;">You should reset the password before this link expires. </p>
+                            <p style="letter-spacing:1px; color:white;">The validation time of this reset password link is for 5 minutes after this email was received . </p>
+                            <p style="letter-spacing:1px; color:white;">Click the reset  button to reset  your password.</p>
+                            <p style="letter-spacing:1px; color:white;">You can reset password till ${moment(linkExpiratinTime).format('MMMM Do YYYY, h:mm:ss a')}</p>
                             <a href="${process.env.FRONTEND_URL}/auth/resetpassword?token=${confirmationHash}"
                                 style="text-decoration: none; color: white;">
-                                <button style="background-color: orange; height: 45px; padding: 0 1rem; font-size: 15px; letter-spacing: 1px; border: none; color: white;">
+                                <button style="background-color: orange; height: 45px; padding: 0 1rem; border-radius:4px; font-size: 15px; letter-spacing: 1px; border: none; color: white;">
                                    Reset Password
                                 </button>
                             </a>
@@ -113,7 +115,7 @@ class EmailService{
                             <p  style="letter-spacing:1px;">Click the verify button to verify your email.</p>
                             <a href="${process.env.FRONTEND_URL}/info/verifyEmail?token=${hash}&info=verify_email"
                                 style="text-decoration: none; color: white;">
-                                <button style="background-color: orange; height: 45px; padding: 0 1rem; font-size: 15px; letter-spacing: 1px; border: none; color: white;">
+                                <button style="background-color: orange; border-radius:4px; height: 45px; padding: 0 1rem; font-size: 15px; letter-spacing: 1px; border: none; color: white;">
                                     Verify Now
                                 </button>
                             </a>

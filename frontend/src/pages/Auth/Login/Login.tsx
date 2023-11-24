@@ -69,11 +69,11 @@ const InnerForm=(props:otherProps & FormikProps<formValues>)=>{
                         )
                     }
                 </div>
-               {/* <Link to={"/auth/sent_reset_link"}>
+               <Link to={"/auth/sent_reset_link"}>
                 <p className="forgotPassword">Forgot
                  Password ?</p>
 
-               </Link> */}
+               </Link>
               
                 <button className={loading ? "loading":""} type="submit" disabled={isSubmitting || !!(errors.email && touched.email) || !!(errors.password && touched.password)}>{loading ?  <iframe src="https://lottie.host/embed/001b9309-3a98-48c6-96d4-42b13cf1b412/eDDX84yAca.json"></iframe>:"Login"}</button>
             </form>

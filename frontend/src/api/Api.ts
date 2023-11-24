@@ -1,7 +1,8 @@
 import axios from "axios";
+import { string } from "yup";
 
 const axiosInstance = axios.create({
-    baseURL:"https://resourcify-pl7s.onrender.com/api",
+    baseURL:"http://localhost:8000/api",
     withCredentials:true
 
 })
@@ -73,3 +74,5 @@ export const emailConfirmationApi=(token:string)=>axiosInstance.post(`/auth/emai
 export const sentEmailToVerifyAccountApi=(email:string)=>axiosInstance.post("/auth/sent_verification_link",{email})
 
 
+export const sentEmailToResetPasswordApi=(email:string)=>axiosInstance.post("/auth/sent_emai_reset_password",{email})
+export const  resetPasswordApi=(password:string,token:string)=>axiosInstance.post("/auth/reset_password",{password,token})

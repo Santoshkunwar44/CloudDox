@@ -51,14 +51,36 @@ export const ForgotPasswordWrapper = styled.div`
                 letter-spacing: 0.9px;
                 color: var(--main_color);
             }
-            
+
+        input{
+            &::placeholder{
+                font-size: 14px;
+            }
+        }            
         }
         button{
             background-color: var(--main_color);
             height: 50px;
             font-size: 18px;
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+          
         }
+        .loading{
+            background-color: transparent;
+            border: 1px solid var(--main_color);
+
+            iframe{
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+    
     }
     .goToText{
         color: var(--main_color);
