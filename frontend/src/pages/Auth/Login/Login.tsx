@@ -154,7 +154,7 @@ const Login = () => {
                 </>
             }
            <Link to={"/auth/register"}>
-           <p className="goToText">Dont have account ?</p>
+           <p className="goToText">Don't have account ?</p>
            </Link> 
         </div>
     </LoginWrapper>

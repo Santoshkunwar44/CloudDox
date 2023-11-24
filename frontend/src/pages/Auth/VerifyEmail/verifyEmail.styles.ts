@@ -69,6 +69,17 @@ justify-content: center;
             cursor: pointer;
             font-size: 18px;
             padding: 0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loading{
+            background-color: transparent;
+            border: 1px solid var(--main_color);
+        }
+        iframe{
+            width: 40px;
+            height: 40px;
         }
     }
     .goTo{
