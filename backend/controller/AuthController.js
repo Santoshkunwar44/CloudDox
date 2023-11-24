@@ -102,7 +102,7 @@ class AuthController{
     
     try {
       
-      const user =   await UserModel.findOne({email});
+      const user =   await User.findOne({email});
       if(!user){
        throw  Error("This email is not registered in Resourcify")
       }

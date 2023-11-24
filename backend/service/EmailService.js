@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken");
 const authService = require("./authService");
 const nodemailer = require("nodemailer")
+const moment = require("moment")
 
 
 
@@ -40,7 +41,45 @@ class EmailService{
     getResetPasswordHtml(email){
 
         const confirmationHash= authService.getEmailConfirmationHash(email);
-        return ``
+        let linkExpiratinTime = new Date().getTime() + 1000 * 60 *5;
+        return `
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: black; color: white;">
+    <table cellspacing="0" cellpadding="0" width="100%" style="background: black;">
+        <tr>
+            <td style="padding: 1rem;">
+                <table cellspacing="0" cellpadding="0" style="display: flex; flex-direction: column;">
+                    <tr>
+                        <td style="display: flex; align-items: center; gap: 10px;">
+                            <h1 style="color:orange">Resourcify</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p  style="letter-spacing:1px;">Reset Resourcify password .</p>
+                            <p  style="letter-spacing:1px;" >You should reset the password before this link expires.The validation time of this reset password link is for 5 minutes after this email was received .  You can reset password till ${moment(linkExpiratinTime).format('MMMM Do YYYY, h:mm:ss a')}</p>
+                            <p  style="letter-spacing:1px;">Click the reset  button to reset  your password.</p>
+                            <a href="${process.env.FRONTEND_URL}/auth/resetpassword?token=${confirmationHash}"
+                                style="text-decoration: none; color: white;">
+                                <button style="background-color: orange; height: 45px; padding: 0 1rem; font-size: 15px; letter-spacing: 1px; border: none; color: white;">
+                                   Reset Password
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+        `
         
       
 
