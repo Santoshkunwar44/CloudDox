@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { ForgotPasswordWrapper } from "./ForgotPassword.styles"
 import { ChangeEvent, SyntheticEvent, useState } from "react"
 import useAlert from "../../../hooks/useAlert"
@@ -8,8 +8,7 @@ const ForgotPassword = () => {
   const [email,setEmail ] =useState("");
   const {notify} = useAlert()
   const [loading,setLoading] = useState(false)
-
-
+  const navigate =useNavigate()
 
 
 
@@ -26,6 +25,7 @@ const ForgotPassword = () => {
      const {status} =   await  sentEmailToResetPasswordApi(email)
      if(status===200){
       notify("Password reset link has been sent to your email","success")
+      navigate("/info/email_sent?info=email_sent");
      }
      setLoading(false)
     } catch (error:any) {
