@@ -48,7 +48,7 @@ const ForgotPassword = () => {
                         <label htmlFor="">Email</label>
                         <input required type="email" placeholder="your email address" onChange={handleInputChange} />
                     </div>
-                    <button type="submit">Send link to email</button>
+                    <button className={loading ? "loading":""} type="submit">{loading?   <iframe src="https://lottie.host/embed/001b9309-3a98-48c6-96d4-42b13cf1b412/eDDX84yAca.json"></iframe>:"Send link to email"}</button>
                 </form>
                 <hr className="hrLine" />
                <Link to={"/auth/login"}>
