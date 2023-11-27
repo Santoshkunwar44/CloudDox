@@ -1,4 +1,5 @@
 export const  categoryData=[
+
     {
         name:"Business Intelligence",
         image:"https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/e2efb4f6-9d99-43a8-b05f-4b2987de2788/Cover_Business/w=1920"
@@ -117,125 +118,10 @@ export const GroupData=[
 export const resourceData=[
     {
         placement:1,
-        path:"/videos/1.mp4",
-        name:"0001 - Introduction to Office 365",
-        type:"video",
-    },{
-        name:"0002 - Privacy and Security",
-        path:"/videos/2.mp4",
-        placement:2,
-        type:"video",
-    },
-    {
-        placement:3,
-        path:"/videos/003.mp4",
-        name:"0003 - Microsoft 365 on Your Mobile Device",
-        type:"video",
-    },{
-        name:"0004 - Family Settings",
-        path:"/videos/004.mp4",
-        placement:4,
-        type:"video",
-    },
-    {
-        placement:5,
-        path:"/videos/005.mp4",
-        name:"0005 - Create a Presentation with Microsoft Sway",
-        type:"video",
-    },{
-        name:"0006 - Search the Entire Platform for Microsoft Documents",
-        path:"/videos/006.mp4",
-        placement:6,
-        type:"video",
-    },
-    {
-        placement:7,
-        path:"/videos/007.mp4",
-        name:"0007 - Manage Your Tasks with Microsoft ToDo",
-        type:"video",
-    },{
-        name:"0002 - Privacy and Security",
-        path:"/videos/008.mp4",
-        placement:8,
-        type:"video",
-    },
-    {
-        placement:8,
-        path:"/videos/1.mp4",
-        name:"0001 - Introduction to Office 365",
-        type:"video",
-    },{
-        name:"0002 - Privacy and Security",
-        path:"/videos/9.mp4",
-        placement:9,
-        type:"video",
-    },
-    {
-        placement:10,
-        path:"/videos/10.mp4",
-        name:"0001 - Introduction to Office 365",
-        type:"video",
-    },{
-        name:"0002 - Privacy and Security",
-        path:"/videos/11.mp4",
-        placement:11,
-        type:"video",
-    },
-    {
-        placement:12,
-        path:"/videos/12.mp4",
-        name:"0001 - Introduction to Office 365",
-        type:"video",
-    },{
-        name:"0002 - Privacy and Security",
-        path:"/videos/13.mp4",
-        placement:13,
-        type:"video",
-    },
-    {
-        placement:14,
-        path:"/videos/14.mp4",
-        name:"0001 - Introduction to Office 365",
-        type:"video",
-    },{
-        name:"0002 - Privacy and Security",
-        path:"/videos/15.mp4",
-        placement:15,
-        type:"video",
-    },
-    {
-        placement:16,
-        path:"/videos/16.mp4",
-        name:"0001 - Introduction to Office 365",
-        type:"video",
-    },{
-        name:"0002 - Privacy and Security",
-        path:"/videos/17.mp4",
-        placement:17,
-        type:"video",
-    },
-     {
-        placement:18,
-        path:"/videos/18.mp4",
-        name:"0001 - Introduction to Office 365",
-        type:"video",
-    },{
-        name:"0002 - Privacy and Security",
-        path:"/videos/19.mp4",
-        placement:19,
-        type:"video",
-    },
-    {
-        placement:20,
-        path:"/videos/20.mp4",
-        name:"0001 - Introduction to Office 365",
-        type:"video",
-    },{
-        name:"0002 - Privacy and Security",
-        path:"/videos/21.mp4",
-        placement:21,
-        type:"video",
-    },
+        path:"/resources/productDevelopment/6-Figure%20Digital%20Products/6-Figure%20Digital%20Products%20-%20Book.pdf",
+        type:"pdf",
+        uri:"",
+    }
 ]
 
 

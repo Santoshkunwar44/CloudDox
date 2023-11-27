@@ -20,7 +20,21 @@ width: 450px;
 }
 .groupDesc{
     font-size: 14px;
+    text-align: start;
     color: var(--gray_color);
+      overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2;
+   -webkit-box-orient: vertical;
+}
+.fileWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 400px;
+    overflow: scroll;
 }
 
 @media screen  and (max-width:768px){

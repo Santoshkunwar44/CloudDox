@@ -12,8 +12,9 @@ const UploadResource = () => {
     bundle:"",
     group:"",
     file:"",
+    placement:0,
     type:"",
-    display:true
+    display:true,
 })
     const [categoryData,setCategoryData] =useState<BundleType[]>([])
     const [filesData,setFilesData] = useState<fileType[]>([])
@@ -21,6 +22,7 @@ const UploadResource = () => {
     const [groupTypesData,setGroupTypesData] = useState<GroupType[]>([])
     const [file,setFile] = useState<File|null>(null)
     const fileInputRef = useRef<HTMLInputElement|null>(null)
+    const [fileUrl,setFileUrl] =useState("")
     const supportedMedia={
         audio:".mp3, .wav, .ogg",
         video:".mp4",
@@ -32,6 +34,8 @@ const UploadResource = () => {
   video: (url: string | ArrayBuffer) => Promise<AxiosResponse<any, any>>;
   pdf: (url: string | ArrayBuffer) => Promise<AxiosResponse<any, any>>;
 };
+
+
 
  const apiRoutesMapping: ApiRoutesMapping = {
   image: uploadImageApi,
@@ -54,12 +58,11 @@ const UploadResource = () => {
         getFilesByGroup()
     },[uploadLibraryData.group])
 
-    console.log(file)
     const handleFileChange=(e:ChangeEvent<HTMLInputElement>)=>{
         if(e.target.files){
             let file = e.target.files[0]
             setFile(file)
-            setUploadLibrayData(prev=>({...prev, name:file?.name.split(".")[0]}))
+            setUploadLibrayData(prev=>({...prev, name:file?.name}))
         }
     }
 
@@ -109,9 +112,13 @@ const UploadResource = () => {
 
     const prepareToUpload=(e:SyntheticEvent)=>{
         e.preventDefault()
-          if(!file)return;
-    
-      const reader:FileReader = new FileReader ();
+
+        if(fileUrl){
+            handleSubmit(fileUrl)
+            return
+        }
+     if(!file)return;
+      const reader:FileReader = new FileReader();
       reader.readAsDataURL(file);
       reader.onloadend=()=>{
         let url = reader.result;
@@ -126,6 +133,8 @@ const UploadResource = () => {
     }
  
      const handleUploadImage=async(url:string|ArrayBuffer)=>{
+
+
 
         try {
        const { data, status } = await (apiRoutesMapping as Record<string, (url: string | ArrayBuffer) => Promise<AxiosResponse<any, any>>>)[uploadLibraryData.type](url);
@@ -149,7 +158,7 @@ const UploadResource = () => {
                 })
                 if(status===200){
                     setUploadLibrayData((prev)=>({...prev,   
-                         name:"",
+                        name:"",
                         display:true}))
                     setFile(null)
                     alert("successfully added new library category")
@@ -200,6 +209,8 @@ const UploadResource = () => {
             })
         }
     </select>
+    <input type="text" name="" placeholder="=file url" value={fileUrl} onChange={(e)=>setFileUrl(e.target.value)}/>
+    <input type="number" name="placement" value={uploadLibraryData.placement} onChange={handleInputChange} />
     <input
      type="file"
       ref={fileInputRef}

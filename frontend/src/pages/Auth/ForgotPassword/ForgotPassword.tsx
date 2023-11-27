@@ -30,10 +30,10 @@ const ForgotPassword = () => {
      setLoading(false)
     } catch (error:any) {
       setLoading(false)
-      console.log(error)
       notify(error?.response?.data?.message,"error")
     }
   }
+
 
 
   return (

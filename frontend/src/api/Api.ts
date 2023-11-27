@@ -1,9 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL:"https://resourcify-pl7s.onrender.com/api",
+    baseURL:"http://localhost:8000/api",
     withCredentials:true
-
 })
 
 
@@ -26,7 +25,7 @@ type groupPayloadType={
         bundle:string,
         image:string
 }
-type resourcePayloadType={
+export type resourcePayloadType={
      name:string,
     bundle:string,
     group:string,

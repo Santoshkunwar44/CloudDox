@@ -16,9 +16,12 @@ const GroupItem:React.FC<GroupItemProps> = ({data}) => {
         <img className='groupImage' src={data?.image} alt="" />
             <p className='groupDesc'>{data?.desc}
             </p>
+            <div className="fileWrapper">
+
       {
         data?.files?.map((dat,index)=><File data={dat} key={index}/>)
       }
+      </div>
     </GroupItemWrapper>
   )
 }
