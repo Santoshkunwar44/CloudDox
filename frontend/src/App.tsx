@@ -12,7 +12,6 @@ import VerifyEmail from "./pages/Auth/VerifyEmail/VerifyEmail"
 import ResetPassword from "./pages/Auth/ResetPassword/ResetPassword"
 import Sidebar from "./shared/Sidebar/Sidebar"
 import ProtectedRoutes from "./pages/ProtectedRoutes/ProtectedRoutes"
-import BulkResourceUpload from "./pages/BulkResourceUpload/BulkResourceUpload"
 
 
 function App() {
@@ -30,7 +29,6 @@ function App() {
           </Route>
           </Route>
           <Route path="/admin" element={<Upload/>}/>
-          <Route path="/bulk" element={<BulkResourceUpload/>}/>
         <Route path="/auth/login" element={<Login/>}/>
         <Route path="/auth/register" element={<Register/>}/>
         <Route path="/auth/sent_reset_link" element={<ForgotPassword/>}/>
