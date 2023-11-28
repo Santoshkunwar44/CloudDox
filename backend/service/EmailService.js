@@ -41,7 +41,7 @@ class EmailService{
     getResetPasswordHtml(email){
 
         const confirmationHash= authService.getEmailConfirmationHash(email);
-        let linkExpiratinTime = new Date().getTime() + 1000 * 60 *5;
+        let linkExpiratinTime = new Date().getTime() + 1000 * 60 *10;
         return `
         <!DOCTYPE html>
 <html lang="en">
