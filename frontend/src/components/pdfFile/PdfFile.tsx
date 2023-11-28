@@ -7,12 +7,9 @@ type PdfFilePropsType={
 }
 const PdfFile:React.FC<PdfFilePropsType>= ({resource}) => {
   return (
-    <PdfFileWrapper target='_blank' href={resource?.url}>
-
+    <PdfFileWrapper  target='_blank' href={resource?.url}>
         <ImLink/>
         <p className='pdfName'>{resource?.name}</p>
-
-
     </PdfFileWrapper>
   )
 }

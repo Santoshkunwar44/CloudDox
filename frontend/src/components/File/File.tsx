@@ -91,7 +91,7 @@ const AudioType=()=>{
     return (<>
              <FileTypeWrapper className="fileTypeItem">
                 {/* <BsHeadphones/> */}
-                <p>🎧 Audio</p>
+                <p>🎧 Audio</p> 
             </FileTypeWrapper>
         
     

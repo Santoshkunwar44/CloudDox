@@ -16,7 +16,7 @@ const resourceSchema = mongoose.Schema({
     type:{
         type:String,
         required:true,
-        enums:["audio","video","book","template"]
+        enums:["audio","video","book","template","audio"]
     },
     file:{
         type:mongoose.Schema.Types.ObjectId,

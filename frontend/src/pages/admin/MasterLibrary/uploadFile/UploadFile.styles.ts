@@ -9,8 +9,7 @@ export const UploadFileWrapper = styled.form`
     color: white;
 
     .imageWrapper{
-        width: 200px;
-        height:200px;
+        width: 50px;
         border-radius: 5px;
         overflow: hidden;
         position: relative;

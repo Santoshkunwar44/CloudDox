@@ -21,7 +21,7 @@ export type ResourceType={
     url:string,
     name:string,
     size:number,
-    type: "audio"|"video"|"pdf"|"template",
+    type: "audio"|"video"|"pdf"|"template"|"audio",
     file:fileType,
     display:boolean,
 }
