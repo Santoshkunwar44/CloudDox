@@ -131,7 +131,7 @@ const Login = () => {
             notify("This email is not verified","error")
             setIsVerified(false)
         }else{
-            notify(error?.response?.data?.message,"error")
+            notify(error?.response?.data?.message??"Something went wrong !","error")
         }   
         console.log(error)
     }
