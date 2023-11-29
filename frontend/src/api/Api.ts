@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL:"https://resourcify-pl7s.onrender.com/api",
+    // baseURL:"https://resourcify-pl7s.onrender.com/api",
+    baseURL:"http://localhost:8000/api",
     withCredentials:true
 })
 
